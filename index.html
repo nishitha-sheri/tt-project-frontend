@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Share surplus food with local NGOs and communities through Share a Meal." />
+  <title>Share a Meal | Food Donation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Share a Meal home"><span class="brand-mark">♥</span> Share<span>a</span>Meal</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#home">Home</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#donations">Available food</a>
+      <a href="#donate" class="nav-cta">Donate food</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">GOOD FOOD. BETTER FUTURE.</p>
+        <h1>Share food.<br /><span>Spread kindness.</span></h1>
+        <p class="hero-text">Turn surplus food into a meaningful meal. Connect with local NGOs and volunteers to help good food reach people who need it.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#donate">Donate food <span aria-hidden="true">→</span></a>
+          <a class="button button-light" href="#how-it-works">How it works</a>
+        </div>
+        <div class="impact-strip">
+          <div><strong id="mealCount">1,250+</strong><span>Meals shared</span></div>
+          <div><strong>24</strong><span>Community partners</span></div>
+          <div><strong>100%</strong><span>Community spirit</span></div>
+        </div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Illustration of a bowl of fresh food">
+        <div class="sun"></div>
+        <div class="art-note note-top">♧ Fresh food, shared</div>
+        <div class="plate"><div class="food food-one"></div><div class="food food-two"></div><div class="food food-three"></div><div class="food food-four"></div><div class="food food-five"></div><div class="food food-leaf"></div></div>
+        <div class="art-note note-bottom"><span>♥</span> Every meal matters</div>
+        <div class="spark spark-one">✦</div><div class="spark spark-two">✳</div>
+      </div>
+    </section>
+
+    <section class="how section" id="how-it-works">
+      <div class="section-heading">
+        <p class="eyebrow">SIMPLE STEPS, REAL IMPACT</p>
+        <h2>How it works</h2>
+        <p>Three simple steps can help reduce food waste and support your community.</p>
+      </div>
+      <div class="steps">
+        <article class="step-card"><div class="step-icon">🍲</div><span class="step-number">01</span><h3>List your food</h3><p>Share details about safe, fresh surplus food from an event, home, or business.</p></article>
+        <article class="step-card"><div class="step-icon">🤝</div><span class="step-number">02</span><h3>Connect with a partner</h3><p>NGOs and volunteers can review donation details and coordinate a pickup.</p></article>
+        <article class="step-card"><div class="step-icon">💚</div><span class="step-number">03</span><h3>Make a difference</h3><p>Food is collected and distributed to people in the community.</p></article>
+      </div>
+    </section>
+
+    <section class="donations section" id="donations">
+      <div class="section-heading heading-row">
+        <div><p class="eyebrow">COMMUNITY DONATIONS</p><h2>Food ready to share</h2><p>Example listings show how donations could appear.</p></div>
+        <span class="listing-count" id="listingCount">3 listings</span>
+      </div>
+      <div class="donation-grid" id="donationGrid">
+        <article class="donation-card"><div class="food-photo photo-rice"><span>🍱</span><small>READY TO COLLECT</small></div><div class="donation-info"><div class="tag">Cooked meals</div><h3>Fresh lunch boxes</h3><p>📍 Madhapur, Hyderabad</p><div class="card-footer"><span><strong>35</strong> servings</span><span>Today · 1:00 PM</span></div></div></article>
+        <article class="donation-card"><div class="food-photo photo-fruit"><span>🍎</span><small>READY TO COLLECT</small></div><div class="donation-info"><div class="tag">Fresh produce</div><h3>Fruit basket surplus</h3><p>📍 Gachibowli, Hyderabad</p><div class="card-footer"><span><strong>20</strong> servings</span><span>Today · 3:30 PM</span></div></div></article>
+        <article class="donation-card"><div class="food-photo photo-meal"><span>🥘</span><small>READY TO COLLECT</small></div><div class="donation-info"><div class="tag">Event leftovers</div><h3>Community event meals</h3><p>📍 Kondapur, Hyderabad</p><div class="card-footer"><span><strong>50</strong> servings</span><span>Today · 5:00 PM</span></div></div></article>
+      </div>
+      <p class="demo-note">Demo content only: these sample listings are not live or verified donations.</p>
+    </section>
+
+    <section class="donate-section" id="donate">
+      <div class="donate-intro"><p class="eyebrow">BE PART OF THE CHANGE</p><h2>Have food to share?</h2><p>Fill in the details below to add a sample donation listing to this page.</p><div class="mini-impact"><span>♥</span><div><strong>A little effort goes a long way.</strong><p>Share responsibly. Donate only safe, properly stored food.</p></div></div></div>
+      <form class="donate-form" id="donationForm">
+        <h3>Donation details</h3>
+        <label for="foodName">Food name</label><input id="foodName" name="foodName" placeholder="e.g. Vegetable rice boxes" required maxlength="60" />
+        <div class="form-row"><div><label for="foodType">Food category</label><select id="foodType" name="foodType" required><option value="">Choose category</option><option>Cooked meals</option><option>Fresh produce</option><option>Packaged food</option><option>Event leftovers</option><option>Bakery items</option></select></div><div><label for="servings">Servings</label><input id="servings" name="servings" type="number" min="1" max="10000" placeholder="e.g. 25" required /></div></div>
+        <label for="location">Pickup area</label><input id="location" name="location" placeholder="e.g. Madhapur, Hyderabad" required maxlength="80" />
+        <label for="pickupTime">Preferred pickup time</label><input id="pickupTime" name="pickupTime" type="time" required />
+        <label for="contact">Contact name</label><input id="contact" name="contact" placeholder="Your name" required maxlength="50" />
+        <button class="button button-primary submit-button" type="submit">Add donation listing <span aria-hidden="true">→</span></button>
+        <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+        <p class="form-disclaimer">Frontend demo: information is added only to this page and is not sent to a server or saved permanently.</p>
+      </form>
+    </section>
+
+    <section class="closing section">
+      <div><p class="eyebrow">LESS WASTE, MORE CARE</p><h2>Good food belongs on a plate,<br />not in a landfill.</h2></div>
+      <a class="button button-primary" href="#donate">Start donating <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#home"><span class="brand-mark">♥</span> Share<span>a</span>Meal</a><p>A student frontend project promoting food donation and waste reduction.</p><span>© <span id="year"></span> Share a Meal · Demo project</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
